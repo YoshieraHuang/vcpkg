@@ -8,8 +8,13 @@ vcpkg_from_github(
 )
 
 vcpkg_check_features(OUT_FEATURE_OPTIONS FEATURE_OPTIONS
-     tests     HIGHFIVE_UNIT_TESTS
-     boost     HIGHFIVE_USE_BOOST
+    FEATURES
+        tests     HIGHFIVE_UNIT_TESTS
+        boost     HIGHFIVE_USE_BOOST
+        eigen3    HIGHFIVE_USE_EIGEN
+        xtensor   HIGHFIVE_USE_XTENSOR
+        mpi       HIGHFIVE_PARALLEL_HDF5
+        opencv    HIGHFIVE_USE_OPENCV
 )
 
 if(${VCPKG_LIBRARY_LINKAGE} MATCHES "static")
